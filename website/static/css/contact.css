@@ -1,0 +1,47 @@
+body {
+      font-family: Arial, sans-serif;
+    }
+    .contact-form {
+      width: 50%;
+      margin: 50px auto;
+      margin-top: 60px;
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .contact-form input{
+      width: 100%;
+      padding: 20px;
+      border: 2px solid rgba(246, 185, 143, 1);
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      resize: vertical;
+    }
+    .contact-form textarea {
+      width: 100%;
+      height: 180px;
+      padding: 20px;
+      border: 2px solid rgba(246, 185, 143, 1);
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      resize: vertical;
+    }
+    .contact-form button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    div.mycontainer {
+      width:100%;
+      overflow:auto;
+    }
+    div.mycontainer div {
+      width:50%;
+      float:left;
+    }

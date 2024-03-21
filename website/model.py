@@ -3,7 +3,7 @@ from django.forms import ModelForm
 
 
 class Enquiry(models.Model):
-    name = models.CharField(max_length=60)
+    name = models.CharField(max_length=70)
     email = models.EmailField(null=False, blank=False, default='')
     contact = models.BigIntegerField()
     subject = models.CharField(max_length=200, default='')
