@@ -26,3 +26,15 @@ def contact(request):
             x.save()
     return render(request, 'contact.html', context)
 
+
+def login_user(request):
+    if request.method == 'POST':
+        print(request.POST)
+        user = authenticate(
+            username=request.POST.get('username'),
+            password=request.POST.get('password')
+            )
+        if user is not None:
+            login(request, user=user)
+            return redirect('read')
+    return render(request, 'login_page.html')

@@ -4,15 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
     <style>
-*{
+        *{
   text-decoration: none;
   }
 .navbar{
-		background:MediumSeaGreen;
-		font-family: courier;
-		padding-right: 15px;
-		padding-left: 15px;
+		font-family: bitter;
+		text-align: center;
 		}
 .navdiv{
 		display: flex;
@@ -25,37 +24,26 @@ li{
 		}
 li a{
 		color: black;
-		font-size: 25px;
+		font-size: 35px;
 		font-weight: bold;
-		margin-right: 20px;
 		}
-button{
-		background-color: black;
-		color:white;
-		margin-left: 10px;
-		padding: 10px;
-		}
-.info {
-        background-color: #2196F3;
-        } /* Blue */
-.info:hover {
-            background: #0b7dda;
-            }
     </style>
 </head>
 <body>
-<div class="navbar">
+<div class="navbar" style="background:MediumSeaGreen;">
     <div class="navdiv">
         <a href="/" style="padding-top:0px; padding-bottom:0px;">
-        <img title="Logo" src="{% static 'image/Logo.jpg' %}" alt="My image" style="width:100px;height:80px;">
+            <img title="Logo" src="{% static 'image/Logo.jpg' %}" alt="My image" style="width:100px;height:80px;">
         </a>
-            <ul>
+        <ul>
             <li><a title="Home" href="/">Home</a></li>
             <li><a title="Service" href="/services">Service</a></li>
             <li><a title="Contact" href="/contact">Contact</a></li>
-            <button title="login" class="info" onclick="document.location='/login'">Login</button>
-            <button title="Admin Login" class="info" onclick="document.location='/admin'">Admin Login</button>
         </ul>
+        <div class="login">
+            <a href="/login"><img title="Login" src="{% static 'image/Login.png' %}" alt="My image"
+                                  style="width:30px;height:30px;padding-top:10px;"></a>
+        </div>
     </div>
 </div>
 </body>
