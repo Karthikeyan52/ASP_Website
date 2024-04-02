@@ -5,14 +5,6 @@ from django.contrib import messages
 
 
 def home(request):
-    return render(request, 'home.html')
-
-
-def services(request):
-    return render(request, 'services.html')
-
-
-def contact(request):
     data = model.Enquiry.object.all()
     context = {'data': data}
     if request.method == 'POST':
@@ -24,7 +16,7 @@ def contact(request):
         )
         if x is not None:
             x.save()
-    return render(request, 'contact.html', context)
+    return render(request, 'home.html', context)
 
 
 def login_user(request):

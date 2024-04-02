@@ -5,56 +5,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
     <style>
-        @media only screen and (max-width: 500px) {
-        .responsive {
-                width: 100%;
-                }
-        }
-        .container {
-          position: relative;
-        }
-
-        .overlay {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 100%;
-          width: 100%;
-          opacity: 0;
-          transition: .5s ease;
-          background-color: rgba(0, 180, 0, 0.1);
-        }
-
-        .container:hover .overlay {
-          opacity: 1;
-        }
-
-        .text {
-          color: white;
-          font-size: 20px;
-          position: absolute;
-          top: 90%;
-          left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-          text-align: center;
-        }
-    </style>
+p{
+  margin: 35px;
+  font-size: 200%;
+  color:#274e13;
+  font-family: bitter;
+}
+</style>
+    <title>Home</title>
 </head>
-<body>
+<body style="background:rgb(250, 249, 247)">
+<hr>
 <div class="responsive">
     <div class="container">
-        <img title="Image" src="{% static 'image/build.avif' %}" alt="Image" style="width: 100%;
-          height:900px;
-          padding-top:10px;">
-        <div class="overlay">
-            <div class="text">Hello</div>
-        </div>
+        <img title="Image" src="{% static 'image/Logo.jpg' %}" alt="Image" style="width: 100%;
+          height:100%;
+          padding-top:5px;">
+    </div>
+</div>
+<hr>
+<div>
+    <h1 style="text-align:center; color:#274e13; font-family: bitter;
+  font-size: 450%">Construction Starts @1269/sqft
+    </h1>
+    <p>Residential and Commercial Buildings</p>
+    <p>1899+ Quality Checks</p>
+    <p>Three generations of collective experience</p>
+    <p>Only top brand materials of customer choice are used(Full freedom to choose your own material)</p>
+    <p>99 years warranty</p>
+</div>
+<hr>
+<h1 style="text-align:center; color:#274e13; font-family: bitter;
+  font-size: 280%">Contact us</h1>
+<div class="mycontainer">
+    <div>
+        <form class="contact-form" method="POST" action="" onsubmit="return validateForm()">
+            {% csrf_token %}
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="name" placeholder="Your Full Name" required="required">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required="required">
+            <label for="subject">Contact</label>
+            <input type="text" id="contact" name="contact" placeholder="Contact" required="required">
+            <label for="message">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write your message here" required="required"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div>
+        <img title="Logo" src="{% static 'image/Logo.jpg' %}" alt="My image" style="width:100%;height:100%;">
     </div>
 </div>
 </body>
